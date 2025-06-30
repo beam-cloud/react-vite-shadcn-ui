@@ -98,22 +98,22 @@
     /* Iframe-friendly styles */
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    height: 100vh;
-    width: 100vw;
+    overflow-y: auto;
+    min-height: 100vh;
+    width: 100%;
   }
   
   html {
-    /* Prevent any overflow */
-    overflow: hidden;
+    /* Allow scrolling while maintaining iframe compatibility */
+    overflow-y: auto;
     height: 100%;
     width: 100%;
   }
   
   #root {
-    /* Ensure root container fits iframe */
-    height: 100%;
+    /* Ensure root container can scroll within iframe */
+    min-height: 100%;
     width: 100%;
-    overflow: hidden;
+    overflow-y: auto;
   }
 }
