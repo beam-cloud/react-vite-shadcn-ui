@@ -95,25 +95,21 @@
   body {
     @apply bg-background text-foreground;
 
-    /* Iframe-friendly styles */
+    /* Let body be the primary scroller */
     margin: 0;
-    padding: 0;
+    height: 100%;
     overflow-y: auto;
-    min-height: 100vh;
-    width: 100%;
   }
-  
+
   html {
-    /* Allow scrolling while maintaining iframe compatibility */
-    overflow-y: auto;
+    /* Prevent any overflow on html element and fill iframe */
     height: 100%;
     width: 100%;
+    overflow: hidden;
   }
-  
+
   #root {
-    /* Ensure root container can scroll within iframe */
-    min-height: 100%;
+    /* Root container should grow with content */
     width: 100%;
-    overflow-y: auto;
   }
 }
