@@ -94,5 +94,26 @@
   }
   body {
     @apply bg-background text-foreground;
+
+    /* Iframe-friendly styles */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  html {
+    /* Prevent any overflow */
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+  }
+  
+  #root {
+    /* Ensure root container fits iframe */
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
   }
 }
