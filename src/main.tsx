@@ -5,6 +5,8 @@ import "@/styles/globals.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
+    <main className="h-screen w-screen other-default-tailwind-classes">
+      <App />
+    </main>
   </StrictMode>
 );
