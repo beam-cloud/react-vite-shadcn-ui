@@ -11,13 +11,13 @@ export default defineConfig({
     },
   },
   server: {
-    host: '::',
+    host: "::",
     port: 3000,
     strictPort: true,
-    hmr: false, // Disable HMR to prevent constant refresh
-    watch: {
-      usePolling: true, // Use polling instead of file system events
-      interval: 1000, // Poll every second
-    }
+    hmr: {
+      host: "::",
+      port: 3000,
+      protocol: "ws",
+    },
   }
 });
